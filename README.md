@@ -6,11 +6,10 @@ This repository contains code for the Kaggle competition where the goal is to pr
 - [Overview](#overview)
 - [Data](#data)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Notebook Intro](#notebook-intro)
 - [Model Training](#model-training)
 - [Evaluation](#evaluation)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Overview
 
@@ -51,29 +50,15 @@ cd flood-prediction
 pip install -r requirements.txt
 ```
 
-## Usage
-
-To run the code, follow these steps:
-
-1. **Prepare the Data**: Ensure that your data is in the `data` directory. You may need to adjust the paths in the code accordingly.
-
-2. **Preprocess the Data**: Run the preprocessing script to clean and prepare the data for training.
-
-    ```bash
-    python scripts/preprocess.py
-    ```
-
-3. **Train the Model**: Use the training script to train the machine learning models. For example, to train an XGBoost model, run:
-
-    ```bash
-    python scripts/train.py --model xgboost --params params/xgboost_params.json
-    ```
-
-4. **Evaluate the Model**: After training, evaluate the model on the test set to see its performance.
-
-    ```bash
-    python scripts/evaluate.py --model xgboost
-    ```
+## Notebook Intro
+In the notebook, I will write down the steps I have did in a clear way.
+- <b>Import Data</b> - Imported train, test and original data of flood factors.
+- <b>Statistics</b> - Understanding the basic descriptive statistics of the data to get the basic idea.
+- <b>Exploratory Data Analysis</b> - Done EDA to understand the distributions and relationship between features and target variable.
+- <b>Feature Engineering</b> - Created new features that has a linear relationship with the target variable.
+- <b>Model Training</b> - Trained all the regression models to understand how each model performs on this type of data.
+- <b>Cross Validation</b> - Done Cross Validation to understand whether the model performs consistent across all the folds.
+- <b>Prediction</b> - Prediction on test data to submit to competetion
 
 ## Model Training
 
@@ -91,28 +76,14 @@ We have used various machine learning models for this task, including:
 
 Each model can be trained by specifying the model name and parameter file. For example, to train a LightGBM model, use:
 
-```bash
-python scripts/train.py --model lightgbm --params params/lightgbm_params.json
-```
 
 ## Evaluation
 
 The models are evaluated using the R² score to measure the goodness of fit. The evaluation script will output the R² score for the training and test sets.
 
-Example command:
-
-```bash
-python scripts/evaluate.py --model lightgbm
-```
 
 ## Contributing
 
-Contributions are welcome! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to this project.
+Contributions are welcome! Please reach out to me if there are any improvements we can do or incase of any doubts at aknandam30@gmail.com
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to modify the paths and script names to match your actual project structure. This README should give a clear overview of the project and instructions on how to set it up and run it.
